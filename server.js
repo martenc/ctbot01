@@ -6,10 +6,5 @@ app.get('/', function (req, res) {
   res.send('ohhh sheeeeyiiittt!');
 });
 
-//start a server on port 80 and log its start to our console
-var server = app.listen(80, function () {
-
-  var port = server.address().port;
-  console.log('Example app listening on port ', port);
-
-});
+app.listen(process.env.PORT || 8080, null);
+console.log('server running on port 8080');
